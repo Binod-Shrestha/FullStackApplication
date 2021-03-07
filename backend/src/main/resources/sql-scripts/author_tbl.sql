@@ -16,3 +16,11 @@ go
 INSERT INTO author VALUES('Aayush Shrestha', '6 Berringer Grove', 'abc@abc.com');
 
 SELECT * FROM AUTHOR;
+
+--DROP TABLE author;
+CREATE TABLE author(
+authorId INTEGER PRIMARY KEY NOT NULL,
+author VARCHAR(50) NOT NULL,
+address VARCHAR(50),
+email VARCHAR(90),
+);
