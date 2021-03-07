@@ -2,6 +2,7 @@
 use BookLibrary;
 go
 
+
 ----DROP TABLE author;
 --CREATE TABLE author(
 --authorId INTEGER PRIMARY KEY IDENTITY NOT NULL,
