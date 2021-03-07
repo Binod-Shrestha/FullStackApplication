@@ -1,5 +1,7 @@
 package com.shresthabinod.backend.controllers;
 
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import com.shresthabinod.backend.model.Book;
 import com.shresthabinod.backend.services.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,6 +54,5 @@ public class BookController {
   public void deleteBookById(@PathVariable Integer id){
     this.bookService.deleteUser(id);
   }
-
 
 }

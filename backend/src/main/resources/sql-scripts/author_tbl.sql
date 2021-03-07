@@ -2,7 +2,6 @@
 use BookLibrary;
 go
 
-
 ----DROP TABLE author;
 --CREATE TABLE author(
 --authorId INTEGER PRIMARY KEY IDENTITY NOT NULL,
@@ -15,7 +14,6 @@ go
 --ADD CONSTRAINT fk_authorId IDENTITY (bookId, authorId);
 --INSERT INTO author VALUES('Binod Shrestha', '6 Berringer Grove', 'abc@abc.com');
 INSERT INTO author VALUES('Aayush Shrestha', '6 Berringer Grove', 'abc@abc.com');
-
 
 SELECT * FROM AUTHOR;
 

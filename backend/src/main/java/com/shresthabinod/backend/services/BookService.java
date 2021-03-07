@@ -32,6 +32,4 @@ public class BookService {
     this.bookRepository.deleteById(id);
   }
 
-
-
 }
