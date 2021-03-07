@@ -16,6 +16,7 @@ go
 --INSERT INTO author VALUES('Binod Shrestha', '6 Berringer Grove', 'abc@abc.com');
 INSERT INTO author VALUES('Aayush Shrestha', '6 Berringer Grove', 'abc@abc.com');
 
+
 SELECT * FROM AUTHOR;
 
 --DROP TABLE author;
