@@ -1,11 +1,10 @@
 package com.shresthabinod.backend.repositories;
 
 import com.shresthabinod.backend.model.Book;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class BookRepository implements CrudRepository<Book, String>() {
-  Book findById(Integer id);
+public interface BookRepository extends JpaRepository<Book, Integer> {
 
 }
