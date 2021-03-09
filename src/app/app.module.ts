@@ -10,6 +10,7 @@ import { AddItemsComponent } from './components/add-items/add-items.component';
 import { DisplayItemsComponent } from './components/display-items/display-items.component';
 import { UpdateComponentsComponent } from './components/update-components/update-components.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import { UpdateComponentsComponent } from './components/update-components/update
     AddItemsComponent,
     DisplayItemsComponent,
     UpdateComponentsComponent
+    MainComponent
   ],
   imports: [
     BrowserModule,
