@@ -25,7 +25,7 @@ spring.jpa.hibernate.naming_strategy=org.hibernate.cfg.EJB3NamingStrategy<br>
 spring.jpa.show-sql = true<br>
 
 ## Database
-- Book Table Script
+- Book Table Script<br>
 CREATE TABLE BOOK(<br>
 bookId INT PRIMARY KEY NOT NULL AUTO_INCREMENT,<br>
 bookName VARCHAR(50) NOT NULL,<br>
