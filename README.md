@@ -18,11 +18,11 @@ This application is developed using Angular for front end, Spring Boot for back 
 
 ### MySql database configuration in application.properties
 - Configuration
-spring.datasource.url=jdbc:mysql://${MYSQL_HOST:localhost}:3306/librarydb
-spring.datasource.username=username
-spring.datasource.password=password
-spring.jpa.hibernate.naming_strategy=org.hibernate.cfg.EJB3NamingStrategy
-spring.jpa.show-sql = true
+spring.datasource.url=jdbc:mysql://${MYSQL_HOST:localhost}:3306/librarydb<br>
+spring.datasource.username=username<br>
+spring.datasource.password=password<br>
+spring.jpa.hibernate.naming_strategy=org.hibernate.cfg.EJB3NamingStrategy<br>
+spring.jpa.show-sql = true<br>
 
 ## Database
 - Book Table Script
