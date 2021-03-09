@@ -26,16 +26,17 @@ spring.jpa.show-sql = true<br>
 
 ## Database
 - Book Table Script
-CREATE TABLE BOOK(
-bookId INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-bookName VARCHAR(50) NOT NULL,
-publication VARCHAR(50),
-publishedYear INT,
-price DECIMAL
-);
+CREATE TABLE BOOK(<br>
+bookId INT PRIMARY KEY NOT NULL AUTO_INCREMENT,<br>
+bookName VARCHAR(50) NOT NULL,<br>
+publication VARCHAR(50),<br>
+publishedYear INT,<br>
+price DECIMAL<br>
+);<br>
 - 
 
 ## Running unit tests
+- Junit Test
+- Jasmin and Karma (Angular)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
