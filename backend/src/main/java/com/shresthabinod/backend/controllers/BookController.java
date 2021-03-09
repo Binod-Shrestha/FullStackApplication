@@ -13,18 +13,18 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 @RestController
-@RequestMapping("/books")
+@RequestMapping("/api")
 public class BookController {
   @Autowired
   private BookService bookService;
 
-  @GetMapping("")
+  @GetMapping("/books")
   public List<Book> list() {
     return this.bookService.listAllBook();
   }
 
   // retrieving particular resource
-  @GetMapping("/{id}")
+  @GetMapping("/books/{id}")
   public ResponseEntity<Book> get(@PathVariable Integer id) {
     try {
       Book book = bookService.getBook(id);
@@ -34,13 +34,13 @@ public class BookController {
     }
   }
   // adding resource
-  @PostMapping("")
+  @PostMapping("/books")
   public void add(@RequestBody Book book){
     this.bookService.saveBook(book);
   }
 
   //updating particular resource
-  @PutMapping("/{id}")
+  @PutMapping("/books/{id}")
   public ResponseEntity<Book> update(@RequestBody Book book, @PathVariable Integer id){
     try {
       Book existingBook = this.bookService.getBook(id);
@@ -50,7 +50,7 @@ public class BookController {
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
   }
-  @DeleteMapping("/{id}")
+  @DeleteMapping("/books/{id}")
   public void deleteBookById(@PathVariable Integer id){
     this.bookService.deleteUser(id);
   }

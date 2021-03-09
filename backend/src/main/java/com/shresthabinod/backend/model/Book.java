@@ -7,26 +7,30 @@ import javax.persistence.*;
 public class Book {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private int id;
+  @Column(name = "bookid")
+  private int bookId;
+  @Column(name = "bookname")
   private String bookName;
+  @Column(name = "publication")
   private String publication;
+  @Column(name = "publishedyear")
   private int publishedYear;
-  private int money;
+  @Column(name = "price")
+  private double price;
 // default constructor
   public Book() {
   }
 //constructor with params
-  public Book( String bookName, String publication, int publishedYear, int money) {
-
+  public Book( String bookName, String publication, int publishedYear, double price) {
     this.bookName = bookName;
     this.publication = publication;
     this.publishedYear = publishedYear;
-    this.money = money;
+    this.price = price;
   }
 
   //GETTERS/SETTERS
   public int getId() {
-    return id;
+    return bookId;
   }
 
   public String getBookName() {
@@ -53,22 +57,22 @@ public class Book {
     this.publishedYear = publishedYear;
   }
 
-  public int getMoney() {
-    return money;
+  public double getPrice() {
+    return price;
   }
 
-  public void setMoney(int money) {
-    this.money = money;
+  public void setPrice(int price) {
+    this.price = price;
   }
 
   @Override
   public String toString() {
     return "Book{" +
-      "id=" + id +
+      "id=" + bookId +
       ", bookName='" + bookName + '\'' +
       ", publication='" + publication + '\'' +
       ", publishedYear=" + publishedYear +
-      ", money=" + money +
+      ", money=" + price +
       '}';
   }
 }
