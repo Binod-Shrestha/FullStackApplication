@@ -16,7 +16,6 @@ import { CdkColumnDef } from '@angular/cdk/table';
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +35,7 @@ import { CdkColumnDef } from '@angular/cdk/table';
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule
+    MaterialModule
   ],
   providers: [BookService, CdkColumnDef],
   bootstrap: [AppComponent]
