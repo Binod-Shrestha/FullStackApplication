@@ -1,0 +1,30 @@
+<table cdk-table>
+  <ng-container >
+    <th cdk-header-cell > Book Name </th>
+    <th cdk-header-cell > Publication </th>
+    <th cdk-header-cell > Published Year </th>
+    <th cdk-header-cell > Price </th>
+    <th cdk-header-cell > CRUD </th>
+
+    <tr cdk-cell *ngFor=" let book of books">
+      <td cdk-cell > {{book.bookName}} </td>
+      <td cdk-cell > {{book.publication}} </td>
+      <td cdk-cell > {{book.publishedYear}} </td>
+      <td cdk-cell > {{book.price}} </td>
+      <td mat-cell><a href="">Edit</a></td>
+     <td mat-cell><a href="">Delete</a></td>
+    </tr>
+
+
+
+
+  </ng-container>
+<!--  <tr mat-row *ngFor=" let book of books">-->
+<!--    <td mat-cell>{{book.bookName}}</td>-->
+<!--    <td mat-cell>{{book.publication}}</td>-->
+<!--    <td mat-cell>{{book.publishedYear}}</td>-->
+<!--    <td mat-cell>{{book.price}}</td>-->
+<!--    <td mat-cell><a href="">Edit</a></td>-->
+<!--    <td mat-cell><a href="">Delete</a></td>-->
+<!--  </tr>-->
+</table>
