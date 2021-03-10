@@ -19,7 +19,7 @@ import { UpdateComponentsComponent } from './components/update-components/update
     MainComponent,
     AddItemsComponent,
     DisplayItemsComponent,
-    UpdateComponentsComponent
+    UpdateComponentsComponent,
     MainComponent
   ],
   imports: [
