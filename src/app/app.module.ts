@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -9,6 +8,9 @@ import { MainComponent } from './components/main/main.component';
 import { AddItemsComponent } from './components/add-items/add-items.component';
 import { DisplayItemsComponent } from './components/display-items/display-items.component';
 import { UpdateComponentsComponent } from './components/update-components/update-components.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
+
 
 
 @NgModule({
@@ -21,11 +23,15 @@ import { UpdateComponentsComponent } from './components/update-components/update
     DisplayItemsComponent,
     UpdateComponentsComponent,
     UpdateComponentsComponent,
-    MainComponent
+    MainComponent,
+
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
