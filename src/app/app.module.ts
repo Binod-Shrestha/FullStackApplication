@@ -25,7 +25,6 @@ import { MaterialModule } from './material/material.module';
     UpdateComponentsComponent,
     MainComponent,
 
-
   ],
   imports: [
     BrowserModule,
