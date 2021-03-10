@@ -10,6 +10,9 @@ import { DisplayItemsComponent } from './components/display-items/display-items.
 import { UpdateComponentsComponent } from './components/update-components/update-components.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import {BookService} from './service/book.service';
+import { HttpClientModule } from '@angular/common/http';
+import { CdkColumnDef } from '@angular/cdk/table';
 
 
 
@@ -30,9 +33,11 @@ import { MaterialModule } from './material/material.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MaterialModule,
+    HttpClientModule
     MaterialModule
   ],
-  providers: [],
+  providers: [BookService, CdkColumnDef],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
