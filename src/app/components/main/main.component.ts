@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class MainComponent implements OnInit {
 books: Book[] = [];
 currentBook = new Book();
+isUpdateRecord: boolean = false;
   constructor( private bookService: BookService, private router: Router) { }
 
   ngOnInit(): void {
@@ -43,7 +44,21 @@ getOneBook(id: number): void {
             console.log(data);
             this.reloadData();
           },
-          error => console.log(error));
+          error => {console.log(error);}
+          );
+  }
+
+
+  editBook(id: number): void {
+  this.bookService.updateBook(id, this.currentBook)
+    .subscribe(
+        data => {
+          console.log(data);
+          this.isUpdateRecord= true;
+        },
+        error => {console.log(error);
+        }
+        );
 
   }
 }

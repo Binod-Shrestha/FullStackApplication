@@ -14,6 +14,8 @@ import {BookService} from './service/book.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CdkColumnDef } from '@angular/cdk/table';
 import { FormsModule } from '@angular/forms';
+import { EditItemComponent } from './components/edit-item/edit-item.component';
+
 
 
 
@@ -28,6 +30,7 @@ import { FormsModule } from '@angular/forms';
     UpdateComponentsComponent,
     UpdateComponentsComponent,
     MainComponent,
+    EditItemComponent,
 
   ],
   imports: [

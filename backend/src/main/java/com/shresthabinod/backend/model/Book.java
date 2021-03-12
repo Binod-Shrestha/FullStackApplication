@@ -16,12 +16,12 @@ public class Book {
   @Column(name = "publishedyear")
   private int publishedYear;
   @Column(name = "price")
-  private double price;
+  private int price;
 // default constructor
   public Book() {
   }
 //constructor with params
-  public Book( String bookName, String publication, int publishedYear, double price) {
+  public Book( String bookName, String publication, int publishedYear, int price) {
     this.bookName = bookName;
     this.publication = publication;
     this.publishedYear = publishedYear;
@@ -57,7 +57,7 @@ public class Book {
     this.publishedYear = publishedYear;
   }
 
-  public double getPrice() {
+  public int getPrice() {
     return price;
   }
 

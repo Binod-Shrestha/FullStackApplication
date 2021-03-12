@@ -26,7 +26,7 @@ public class BookController {
 
   // retrieving particular resource
   @GetMapping("/books/{id}")
-  public ResponseEntity<Book> get(@PathVariable int id) {
+  public ResponseEntity<Book> get(@PathVariable(value = "id") int id) {
     try {
       Book book = bookService.getBookById(id);
       return new ResponseEntity<Book>(book, HttpStatus.OK);
@@ -43,10 +43,14 @@ public class BookController {
 
   //updating particular resource
   @PutMapping("/books/{id}")
-  public ResponseEntity<Book> update(@RequestBody Book book, @PathVariable int id) {
+  public ResponseEntity<Book> update(@PathVariable(value = "id") int id, @RequestBody Book bookDetails) {
     try {
       Book existingBook = this.bookService.getBookById(id);
-      this.bookService.saveBook(book);
+      existingBook.setBookName(bookDetails.getBookName());
+      existingBook.setPublication(bookDetails.getPublication());
+      existingBook.setPublishedYear(bookDetails.getPublishedYear());
+      existingBook.setPrice(bookDetails.getPrice());
+      this.bookService.saveBook(existingBook);
       return new ResponseEntity<>(HttpStatus.OK);
     } catch (NoSuchElementException e) {
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
