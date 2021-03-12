@@ -13,6 +13,7 @@ import { MaterialModule } from './material/material.module';
 import {BookService} from './service/book.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CdkColumnDef } from '@angular/cdk/table';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -35,7 +36,9 @@ import { CdkColumnDef } from '@angular/cdk/table';
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+
   ],
   providers: [BookService, CdkColumnDef],
   bootstrap: [AppComponent]
