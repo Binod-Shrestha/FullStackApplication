@@ -1,6 +1,6 @@
 <div class="container">
-  <h2 class="text-center">Add Book</h2>
-  <form>
+  <h2 class="text-center">Edit Book</h2>
+  <form (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="bookName">Book Name:</label>
       <input type="name" [(ngModel)]="book.bookName" placeholder="Name" name="bookName" class="form-control" id="bookName">
@@ -21,7 +21,6 @@
       <input [(ngModel)]="book.price" placeholder="Price" name="price" class="form-control" id="price">
     </div>
 
-    <button mat-raised-button color="accent" (click)="addBook()">Create</button>
+    <button mat-raised-button color="primary" (click)="updateBook()">Submit</button>
   </form>
 </div>
-
