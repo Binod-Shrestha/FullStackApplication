@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.NoSuchElementException;
+
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api")
@@ -25,34 +26,45 @@ public class BookController {
 
   // retrieving particular resource
   @GetMapping("/books/{id}")
-  public ResponseEntity<Book> get(@PathVariable Integer id) {
+  public ResponseEntity<Book> get(@PathVariable int id) {
     try {
-      Book book = bookService.getBook(id);
+      Book book = bookService.getBookById(id);
       return new ResponseEntity<Book>(book, HttpStatus.OK);
     } catch (NoSuchElementException e) {
       return new ResponseEntity<Book>(HttpStatus.NOT_FOUND);
     }
   }
+
   // adding resource
   @PostMapping("/books")
-  public void add(@RequestBody Book book){
+  public void add(@RequestBody Book book) {
     this.bookService.saveBook(book);
   }
 
   //updating particular resource
   @PutMapping("/books/{id}")
-  public ResponseEntity<Book> update(@RequestBody Book book, @PathVariable Integer id){
+  public ResponseEntity<Book> update(@RequestBody Book book, @PathVariable int id) {
     try {
-      Book existingBook = this.bookService.getBook(id);
+      Book existingBook = this.bookService.getBookById(id);
       this.bookService.saveBook(book);
       return new ResponseEntity<>(HttpStatus.OK);
-    } catch (NoSuchElementException e){
+    } catch (NoSuchElementException e) {
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
   }
+
   @DeleteMapping("/books/{id}")
-  public void deleteBookById(@PathVariable Integer id){
-    this.bookService.deleteUser(id);
+  public ResponseEntity<String> deleteBook(@PathVariable(value = "id") int id) {
+    System.out.println("book id:" + id);
+    try {
+      Book book = bookService.getBookById(id);
+
+      bookService.deleteBook(book);
+      return new ResponseEntity<>(HttpStatus.OK);
+    } catch (NoSuchElementException e) {
+      return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+
   }
 
 }

@@ -25,11 +25,12 @@ public class BookService {
     this.bookRepository.save(book);
   }
 
-  public Book getBook(Integer id){
+  public Book getBookById(Integer id){
     return this.bookRepository.findById(id).get();
   }
-  public void deleteUser(Integer id){
+  public void deleteBookById(Integer id){
     this.bookRepository.deleteById(id);
   }
+  public void deleteBook(Book book){this.bookRepository.delete(book);}
 
 }

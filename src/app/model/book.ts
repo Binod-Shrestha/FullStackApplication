@@ -1,6 +1,7 @@
-export interface Book{
-bookName: string;
-publication: string;
-publishedYear: number;
-price: number;
+export class Book{
+id: number;
+bookName?: string;
+publication?: string;
+publishedYear?: number;
+price?: number;
 }
