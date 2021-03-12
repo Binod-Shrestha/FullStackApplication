@@ -34,7 +34,7 @@ import { CdkColumnDef } from '@angular/cdk/table';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
     MaterialModule
   ],
   providers: [BookService, CdkColumnDef],
