@@ -21,13 +21,16 @@ export class AddItemsComponent implements OnInit {
       data => {
       alert("A new book added to library.");
       this.gotoList();
+
       },
       error => {console.log(error);
       });
 
   }
+
   gotoList() {
       this.router.navigate(['']);
     }
+
 
 }
