@@ -4,7 +4,6 @@ import { BookService } from '../../service/book.service';
 import { Observable } from 'rxjs/Observable';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -47,5 +46,4 @@ getOneBook(id: number): void {
           error => console.log(error));
 
   }
-
 }
