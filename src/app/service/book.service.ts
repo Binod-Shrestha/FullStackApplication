@@ -19,7 +19,7 @@ return this.http.get<Book[]>(this.apiURI);
 }
 //get individual book
 getBookById(id: number): Observable<any>{
-return this.http.get(`${this.apiURI}/{id}`);
+return this.http.get(`${this.apiURI}/`+ id);
 }
 
 //createBook
@@ -28,7 +28,7 @@ return this.http.post(`${this.apiURI}`, book);
 }
 //update book record
 updateBook(id: number, value: any): Observable<Object> {
-return this.http.put(`${this.apiURI}/{id}`, value);
+return this.http.put(`${this.apiURI}/`+ id, value);
 }
 //delete individual book
 deleteBookById(id: number): Observable<any> {

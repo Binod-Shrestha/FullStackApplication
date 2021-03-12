@@ -13,7 +13,7 @@
       <td cdk-cell > {{book.publication}} </td>
       <td cdk-cell > {{book.publishedYear}} </td>
       <td cdk-cell > {{book.price}} </td>
-      <td mat-cell><button mat-raised-button color="primary">Edit</button></td>
+      <td mat-cell><button mat-raised-button color="primary" routerLink="/edit/{{book.id}}">Edit</button></td>
      <td mat-cell><button mat-raised-button color="warn" (click)="deleteBook(book.id)">Delete</button></td>
     </tr>
   </ng-container>
