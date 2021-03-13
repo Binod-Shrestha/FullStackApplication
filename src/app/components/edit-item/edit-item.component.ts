@@ -6,8 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-item',
-  templateUrl: './edit-item.component.html',
-  styleUrls: ['./edit-item.component.scss']
+  templateUrl: './edit-item.component.html'
 })
 export class EditItemComponent implements OnInit {
 book: Book;
