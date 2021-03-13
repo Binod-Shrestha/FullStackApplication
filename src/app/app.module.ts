@@ -6,8 +6,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainComponent } from './components/main/main.component';
 import { AddItemsComponent } from './components/add-items/add-items.component';
-import { DisplayItemsComponent } from './components/display-items/display-items.component';
-import { UpdateComponentsComponent } from './components/update-components/update-components.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import {BookService} from './service/book.service';
@@ -26,9 +24,6 @@ import { EditItemComponent } from './components/edit-item/edit-item.component';
     FooterComponent,
     MainComponent,
     AddItemsComponent,
-    DisplayItemsComponent,
-    UpdateComponentsComponent,
-    UpdateComponentsComponent,
     MainComponent,
     EditItemComponent,
 
