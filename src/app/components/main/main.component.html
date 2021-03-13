@@ -5,17 +5,17 @@
     <th cdk-header-cell > Publication </th>
     <th cdk-header-cell > Published Year </th>
     <th cdk-header-cell > Price </th>
-    <th cdk-header-cell > CRUD </th>
-
-    <tr cdk-cell *ngFor=" let book of books">
+    <th cdk-header-cell > </th>
+        <tr cdk-cell *ngFor=" let book of books">
       <td cdk-cell>{{book.id}}</td>
       <td cdk-cell > {{book.bookName}} </td>
       <td cdk-cell > {{book.publication}} </td>
       <td cdk-cell > {{book.publishedYear}} </td>
       <td cdk-cell > {{book.price}} </td>
-      <td mat-cell><button mat-raised-button color="primary" routerLink="/edit/{{book.id}}">Edit</button></td>
-     <td mat-cell><button mat-raised-button color="warn" (click)="deleteBook(book.id)">Delete</button></td>
+      <td mat-cell><button class="btn-home" mat-raised-button color="primary" routerLink="/edit/{{book.id}}">Edit</button></td>
+     <td mat-cell><button class="btn-home" mat-raised-button color="warn" (click)="deleteBook(book.id)">Delete</button></td>
     </tr>
+
   </ng-container>
 </table>
 

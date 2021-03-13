@@ -6,8 +6,8 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+  templateUrl: './main.component.html'
+
 })
 export class MainComponent implements OnInit {
 books: Book[] = [];

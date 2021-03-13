@@ -6,8 +6,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-items',
-  templateUrl: './add-items.component.html',
-  styleUrls: ['./add-items.component.scss']
+  templateUrl: './add-items.component.html'
 })
 export class AddItemsComponent implements OnInit {
 
